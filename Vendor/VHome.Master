@@ -1,0 +1,809 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="VHome.Master.cs" Inherits="As_Your_Need_services.Vendor.VenderMaster" %>
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<!-- Mirrored from aonetheme.com/sf-html-demo/mc-dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 07:08:11 GMT -->
+<head>
+
+	<!-- META -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="robots" content="" />    
+    <meta name="description" content="" />
+    
+    <!-- FAVICONS ICON -->
+    <link rel="icon" href="images/favicon.html" type="image/x-icon" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+    
+    <!-- PAGE TITLE HERE -->
+    <title>Servento | Vendor</title>
+    
+    <!-- MOBILE SPECIFIC -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <!-- BOOTSTRAP STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- Bootstrap toggle -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap4-toggle.min.css">
+    <!-- Bootstrap seclect -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css" /> 
+    <!-- Price Range Slider -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-slider.min.css" />
+    <!-- Bootstrap data table -->
+    <link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap4.min.css">
+    <!-- Dropzone -->
+    <link rel="stylesheet" type="text/css" href="css/dropzone.css">
+    <!-- Fonts -->
+    <link rel="stylesheet" type="text/css" href="css/font.css" />    
+    <!-- Feather icon -->
+    <link rel="stylesheet" type="text/css" href="css/feather.css" />  
+    <!-- Fontawesome -->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <!-- Lc light box popup -->
+    <link rel="stylesheet" type="text/css" href="css/lc_lightbox.css" />     
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" type="text/css" href="css/magnific-popup.min.css">
+    <!-- Custom Scrollbar -->
+    <link rel="stylesheet" type="text/css" href="css/m-custom-scrollbar.min.css" />
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+    <!-- Slick Carousel -->
+    <link rel="stylesheet" type="text/css" href="css/slick.min.css">
+    <!-- Slick Theme -->
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css">  
+    <!-- Main STyle Sheet -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+   
+
+</head>
+ 
+<body> 
+    <!-- LOADING AREA START ===== -->
+    <div class="loading-area">
+        <div class="loading-box"></div>
+        <div class="loading-pic">
+            <div class="windows8">
+                <div class="wBall" id="wBall_1">
+                    <div class="wInnerBall"></div>
+                </div>
+                <div class="wBall" id="wBall_2">
+                    <div class="wInnerBall"></div>
+                </div>
+                <div class="wBall" id="wBall_3">
+                    <div class="wInnerBall"></div>
+                </div>
+                <div class="wBall" id="wBall_4">
+                    <div class="wInnerBall"></div>
+                </div>
+                <div class="wBall" id="wBall_5">
+                    <div class="wInnerBall"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- LOADING AREA  END ====== -->
+
+	<div class="page-wraper">
+    
+        <header id="header-admin-wrap" class="header-admin-fixed">
+        
+            <!-- Header Start -->
+            <div id="header-admin">
+                <div class="container">
+                    
+                    <!-- Left Side Content -->
+                    <div class="header-left">
+                        
+                        <div class="my-account-logo">
+                            <a href="VDashBoard.aspx"><img src="images/logo-dark.png" alt=""></a>
+                        </div>
+                        
+                        <div class="header-widget aon-admin-search-box">
+                            <div class="aon-admin-search ">
+                                <input class="form-control sf-form-control" name="company_name" type="text" placeholder="Search">
+                                <button class="admin-search-btn"><i class="fs-input-icon feather-search"></i></button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- Left Side Content End -->
+                    
+                    <!-- Right Side Content -->
+                    <div class="header-right">
+                        
+                       <%-- <div class="header-menu">
+                            <!-- NAV Toggle Button -->
+                            <button id="mobile-side-drawer" data-target=".header-nav" data-toggle="collapse" type="button" class="navbar-toggler collapsed">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar icon-bar-first"></span>
+                                <span class="icon-bar icon-bar-two"></span>
+                                <span class="icon-bar icon-bar-three"></span>
+                            </button> 
+
+                            <!-- MAIN Vav -->
+                            <div class="nav-animation header-nav navbar-collapse collapse d-flex justify-content-start">
+
+                                <ul class=" nav navbar-nav">
+                                    <li class="has-child current-menu-item"><a href="javascript:;">Home</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="index.html">Home 1</a></li>
+                                            <li><a href="index-2.html">Home 2</a></li>
+                                        </ul>
+                                    </li>
+    
+                                    <li class="has-child">
+                                        <a href="javascript:;">Pages</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="about-us.html">About us</a></li>
+                                            <li><a href="javascript:;">Categories</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="all-categories.html">All Categories</a></li>
+                                                    <li><a href="categories-detail.html">Categories Detail</a></li>
+                                                    <li><a href="categories-detail-2.html">Categories Detail 2</a></li>
+                                                </ul>
+                                            </li>
+              
+                                            <li><a href="javascript:;">Search</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="search-list.html">Search List</a></li>
+                                                    <li><a href="new-search-list-2.html">Search List 2</a></li>
+                                                    <li><a href="search-list-map.html">Search List Map</a></li>
+                                                    <li><a href="search-list-map2.html">Search List Map 2</a></li>
+                                                    <li><a href="search-grid.html">Search-grid</a></li>
+                                                    <li><a href="search-grids-map.html">Search-grid-map</a></li>
+                                                    <li><a href="search-grid-map2.html">Search-grid-map2</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="error-404.html">Error 404</a></li>
+                                        </ul>                                
+                                    </li>
+    
+                                    <li class="has-child"><a href="javascript:;">Profile</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="profile-full.html">Profile</a></li>
+                                            <li><a href="profile-sidebar.html">Profile Sidebar</a></li>
+                                        </ul>                                                                 
+                                    </li>
+                            
+                                    <li class="has-child"><a href="javascript:;">Jobs</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="job-listing.html">Job listing</a></li>                                        
+                                            <li><a href="job-grid.html">Job grid</a></li>
+                                            <li><a href="job-detail.html">Job detail</a></li>                                        
+                                        </ul>                                
+                                    </li>
+                            
+                                    <li class="has-child"><a href="javascript:;">Blog</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="blog-grid.html">Blog Grid</a></li>                                        
+                                            <li><a href="blog-grid-2.html">Blog Grid 2</a></li>
+                                            <li><a href="blog-list.html">Blog list</a></li>
+                                            <li><a href="blog-list-2.html">Blog list 2</a></li>
+                                            <li><a href="blog-list-3.html">Blog list 3</a></li>
+                                            <li><a href="blog-list-4.html">Blog list 4</a></li>
+                                            <li><a href="blog-detail.html">Blog detail</a></li>
+                                        </ul>                                
+                                    </li>
+                                    <li><a href="contact-us.html">Contact</a></li>  
+                            
+                                </ul>
+
+                            </div>
+                        </div>--%>
+                        
+                        <ul class="header-widget-wrap">
+                            <%--<li class="header-widget has-toltip">
+                                <div class="aon-admin-notification sf-toogle-btn">
+                                    <i class="feather-bell"></i>
+                                    <span class="notification-animate">8</span>
+                                    <span class="header-toltip">Notification</span>
+                                </div>
+
+                                <div class="ws-toggle-popup popup-tabs-wrap-section popup-notifica-msg">
+                                    <div class="popup-tabs-wrap">
+
+                                        <div class="popup-tabs">
+
+                                            <ul class="nav nav-tabs nav-justified">                                        
+                                                <!--1-->
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" data-toggle="tab" href="#accepted1">
+                                                        Accepted
+                                                    </a>
+                                                </li>
+                                                <!--2-->
+                                                <li class="nav-item">
+                                                    <a class="nav-link" data-toggle="tab" href="#rejected1">
+                                                        Rejected
+                                                    </a>
+                                                </li>
+                                            </ul>                                       
+                                            <div class="tab-content">
+                                                <div id="accepted1" class="tab-pane active">
+                                                    <div class="ws-poptab-list-wrap">
+                                                        <!--list One-->
+                                                        <div class="ws-poptab-list">
+                                                            <div class="ws-poptab-media">
+                                                                <img src="images/testimonials2/pic1.jpg" alt="">
+                                                            </div>
+                                                            <div class="ws-poptab-info">
+                                                                <strong>David Chua</strong>
+                                                                <p>David wood requested to change.</p>
+                                                                <span class="ws-time-duration">8 mins ago</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <!--list Two-->
+                                                        <div class="ws-poptab-list">
+                                                            <div class="ws-poptab-media">
+                                                                <img src="images/testimonials2/pic2.jpg" alt="">
+                                                            </div>
+                                                            <div class="ws-poptab-info">
+                                                                <strong>Lussa Smith</strong>
+                                                                <p>David wood requested to change.</p>
+                                                                <span class="ws-time-duration">4 mins ago</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <!--list three-->
+                                                        <div class="ws-poptab-list">
+                                                            <div class="ws-poptab-media">
+                                                                <img src="images/testimonials2/pic3.jpg" alt="">
+                                                            </div>
+                                                            <div class="ws-poptab-info">
+                                                                <strong>Zilia Wood</strong>
+                                                                <p>David wood requested to change.</p>
+                                                                <span class="ws-time-duration">2 mins ago</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="ws-poptab-all text-center">
+                                                        <a href="#" class="btn-link-type">View All</a>
+                                                    </div>                                                    
+                                                    
+                                                </div>
+
+                                                <div id="rejected1" class="tab-pane">
+                                                    <div class="ws-poptab-list-wrap">
+                                                        <!--list One-->
+                                                        <div class="ws-poptab-list">
+                                                            <div class="ws-poptab-media">
+                                                                <img src="images/testimonials2/pic1.jpg" alt="">
+                                                            </div>
+                                                            <div class="ws-poptab-info">
+                                                                <strong>Maria Smith</strong>
+                                                                <p>David wood requested to change.</p>
+                                                                <span class="ws-time-duration">8 mins ago</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <!--list Two-->
+                                                        <div class="ws-poptab-list">
+                                                            <div class="ws-poptab-media">
+                                                                <img src="images/testimonials2/pic2.jpg" alt="">
+                                                            </div>
+                                                            <div class="ws-poptab-info">
+                                                                <strong>Zonsan Wood</strong>
+                                                                <p>David wood requested to change.</p>
+                                                                <span class="ws-time-duration">4 mins ago</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <!--list three-->
+                                                        <div class="ws-poptab-list">
+                                                            <div class="ws-poptab-media">
+                                                                <img src="images/testimonials2/pic3.jpg" alt="">
+                                                            </div>
+                                                            <div class="ws-poptab-info">
+                                                                <strong>Denisa Wood</strong>
+                                                                <p>David wood requested to change.</p>
+                                                                <span class="ws-time-duration">2 mins ago</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ws-poptab-all text-center">
+                                                        <a href="#" class="btn-link-type">View All</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="header-widget has-toltip">
+                                <div class="aon-admin-messange sf-toogle-btn">
+                                    <i class="feather-globe"></i>
+                                    <span class="header-toltip">Language</span>
+                                </div>
+                                <div class="ws-toggle-popup popup-tabs-wrap-section popup-curra-lang">
+                                    <ul class="popup-curra-lang-list">
+                                        <li>English</li>
+                                        <li>Franais</li>
+                                        <li>Espaol</li>
+                                        <li>Deutsch</li>
+                                    </ul>
+                                </div>
+                            </li>--%>
+                            <li class="header-widget">
+                                <div class="aon-admin-messange sf-toogle-btn">
+                                    <span class="feather-user-pic"><%--<img src="images/user.jpg" alt=""/>--%>
+                                        <asp:Image ID="ProfileImg" runat="server"  />
+                                    </span>
+                                </div>
+                                <div class="ws-toggle-popup popup-tabs-wrap-section user-welcome-area">
+                                    <ul class="user-welcome-list">
+                                        <li><strong>Welcome , <span class="site-text-primary">
+                                            <asp:Label ID="lblvname2" runat="server" Text=""></asp:Label></span></strong></li>
+                                        <li><a href="VDashBoard.aspx"><i class="feather-sliders"></i> Dashboard</a></li>
+                                        <%--<li><a href="#"><i class="feather-file"></i> Add Listing</a></li>--%>
+                                        <li><a href="VProfile.aspx"><i class="fa fa-user-circle-o"></i> Profile</a></li>
+                                        <li><a href="DispVideo.aspx"><i class="fa fa-video-camera"></i> My Video</a></li>                                       
+                                        <li><a href="ChangePassword.aspx"><i class="fa fa-lock"></i> Change Password</a></li>                                       
+                                        <li><a href="LogOut.aspx"><i class="feather-log-out"></i> Log Out</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            
+
+                        </ul>
+                    </div>
+                    <!-- Right Side Content End -->
+        
+                </div>
+            </div>
+            <!-- Header End -->
+        
+        </header>            
+    	
+        <!-- Sidebar Holder -->
+        <nav id="sidebar-admin-wraper">
+            <div class="pro-my-account-wrap">
+                Vender My Account
+            </div>
+            <div class="admin-nav">
+                <ul class="">
+                    <li class="active">
+                    	<a href="VDashBoard.aspx"><i class="fa fa-dashboard"></i><span class="admin-nav-text">Dashboard</span></a>
+                    </li>
+                   
+                     <li>
+                    	<a href="SubCategory.aspx"><i class="fa fa-cogs"></i><span class="admin-nav-text">Add Sub Category</span></a>
+                    </li>
+                    <li>
+                    	<a href="DispSubCat.aspx"><i class="fa fa-cogs"></i><span class="admin-nav-text">My Sub Category</span></a>
+                    </li>
+                   <%-- <li>
+                    	<a href="mc-my-booking.html"><i class="fa fa-calendar"></i><span class="admin-nav-text">My Booking</span></a>
+                    </li>--%>
+                    <li>
+                        <a href="OrderDetails.aspx"><i class="fa fa-envelope-o"></i><span class="admin-nav-text">Order Details</span><%--<span class="admin-nav-label">4</span>--%></a>
+                    </li> 
+                    <%--<li>
+                    	<a href="mc-availability.html"><i class="fa fa-calendar-check-o"></i><span class="admin-nav-text">Availability</span></a>
+                    </li>--%>
+                    <li>
+                    	<a href="StaffReg.aspx"><i class="fa fa-users"></i><span class="admin-nav-text">Staff Registration</span></a>
+                    </li>
+                    <li>
+                    	<a href="DispStaff.aspx"><i class="fa fa-users"></i><span class="admin-nav-text">My Staff Members</span></a>
+                    </li>
+                    <li>
+                    	<a href="Artical.aspx"><i class="fa fa-pencil-square-o "></i><span class="admin-nav-text">Article</span></a>
+                    </li>
+                    <li>
+                    	<a href="DispArtical.aspx"><i class="fa fa-pencil-square-o "></i><span class="admin-nav-text">Disp Article</span></a>
+                    </li>
+                    <li>
+                    	<a href="DispWishList.aspx"><i class="fa fa-heart"></i><span class="admin-nav-text">Wish List</span></a>
+                    </li>
+                    <li>
+                    	<a href="Video.aspx"><i class="fa fa-upload"></i><span class="admin-nav-text">Upload Video</span></a>
+                    </li>
+                    <li>
+                    	<a href="DispRequestQuote.aspx"><i class="fa fa-quote-left"></i><span class="admin-nav-text">Request Quote </span></a>
+                    </li>
+                    <li>
+                    	<a href="ChangePassword.aspx"><i class="fa fa-lock"></i><span class="admin-nav-text">Change Password</span></a>
+                    </li>
+                    <li>
+                    	<a href="LogOut.aspx"><i class="feather-log-out"></i><span class="admin-nav-text">Logout</span></a>
+                    </li>                   
+                                        
+                </ul>
+            </div>  
+        </nav>
+
+        <!-- Page Content Holder -->
+        <div id="content">
+
+            <div class="content-admin-main">
+                
+                <div class="admin-top-area d-flex flex-wrap justify-content-between m-b30 align-items-center">
+                    
+                    <div class="admin-left-area">
+                        <a class="nav-btn-admin d-flex justify-content-between align-items-center" id="sidebarCollapse">
+                            <span class="nav-btn-text">Dashboard Menu</span>
+                            <span class="fa fa-reorder"></span>
+                        </a>
+                    </div>
+                    
+                   <%-- <div class="admin-area-mid">
+                        <div class="admin-area-heading">
+                            <span>Your Tariff Plan : </span>
+                            <strong>Extended <i class="fa fa-caret-down"></i></strong>
+                        </div>
+                        <div class="admin-area-content">you Are on Extended . Use link bellow to view details or upgrade.Details </div>
+                        
+                    </div>--%>
+                    
+                    <div class="admin-right-area">
+                        <div class="pro-pic-info-wrap d-flex">
+                            <div class="pro-pic-box">
+                                <%--<img src="images/user.jpg" alt=""/>--%>
+                                <asp:Image ID="Profileimg2" runat="server" />
+                            </div>
+                            <div class="pro-pic-info">
+                                <strong>
+                                    <asp:Label ID="lblvname" runat="server" Text=""></asp:Label></strong>
+                                <span>
+                                    <asp:Label ID="lblcat" runat="server" Text=""></asp:Label></span>
+                            </div>
+                           <%-- <span class="feather-icon has-toltip">
+                                <i class="feather-power"></i>
+                                <span class="header-toltip">Notification</span>
+                            </span>--%>
+                        </div>
+                    </div>
+                </div>
+
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+            
+               <%-- <div class="row">
+                    <div class="col-xl-8 col-lg-12 m-b30 break-1300">
+                        <div class="card aon-card">
+                            <div class="card-body aon-card-body">
+                                <div class="row">
+                                    <div class="col-lg-4 m-b30">
+                                        <div class="panel panel-default ser-card-default">
+                                            <div class="panel-body ser-card-body ser-puple p-a30">
+                                                <div class="ser-card-title">Wallet</div>
+                                                <div class="ser-card-icons"><img src="images/wallet.png" alt=""/></div>
+                                                <div class="ser-card-amount">$252.45</div>
+                                                <div class="ser-card-table">
+                                                    <div class="ser-card-left">
+                                                        <div class="ser-card-total">
+                                                            <div class="ser-total-table">
+                                                                <div class="ser-total-cell1">Total</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ser-card-right">
+                                                        <div class="ser-card-icon"><i class="glyph-icon flaticon-money-3"></i></div>
+                                                    </div>
+                                                </div>
+                                                <span class="ser-card-circle-bg"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 m-b30">
+                                        <div class="panel panel-default ser-card-default">
+                                            <div class="panel-body ser-card-body ser-orange p-a30">
+                                                <div class="ser-card-title">Booking</div>
+                                                <div class="ser-card-icons"><img src="images/booking.png" alt=""/></div>
+                                                <div class="ser-card-amount">465</div>
+                                                <div class="ser-card-table">
+                                                    <div class="ser-card-left">
+                                                        <div class="ser-card-total">
+                                                            <div class="ser-total-table">
+                                                                <div class="ser-total-cell1">Wallet</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ser-card-right">
+                                                        <div class="ser-card-icon"><i class="glyph-icon flaticon-wallet"></i></div>
+                                                    </div>
+                                                </div>
+                                                <span class="ser-card-circle-bg"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 m-b30">
+                                        <div class="panel panel-default ser-card-default">
+                                            <div class="panel-body ser-card-body ser-blue p-a30">
+                                                <div class="ser-card-title">Earning</div>
+                                                <div class="ser-card-icons"><img src="images/earning.png" alt=""/></div>
+                                                <div class="ser-card-amount">$124.00</div>
+                                                <div class="ser-card-table">
+                                                    <div class="ser-card-left">
+                                                        <div class="ser-card-total">
+                                                            <div class="ser-total-table">
+                                                                <div class="ser-total-cell1">Complete</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ser-card-right">
+                                                        <div class="ser-card-icon"><i class="glyph-icon flaticon-calendar"></i></div>
+                                                    </div>
+                                                </div>
+                                                <span class="ser-card-circle-bg"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="col-xl-4 col-lg-12 m-b30 break-1300">
+                        <div class="card aon-card">
+                            <div class="card-header aon-card-header aon-card-header2"><h4><i class="feather-bell"></i> Notifications</h4></div>
+                            <div class="card-body aon-card-body">
+                                
+                                <div class="tab-content">
+                                    <div id="accepted11" class="tab-pane active">
+                                        <div class="ws-poptab-list-wrap notification-scroll">
+                                            <!--list One-->
+                                            <div class="ws-poptab-list">
+                                                <div class="ws-poptab-media">
+                                                    <img src="images/testimonials2/pic1.jpg" alt="">
+                                                </div>
+                                                <div class="ws-poptab-info">
+                                                    <strong>Maria Smith</strong>
+                                                    <p>David wood requested to change.</p>
+                                                    <span class="ws-time-duration">8 mins ago</span>
+                                                </div>
+                                            </div>
+
+                                            <!--list Two-->
+                                            <div class="ws-poptab-list">
+                                                <div class="ws-poptab-media">
+                                                    <img src="images/testimonials2/pic2.jpg" alt="">
+                                                </div>
+                                                <div class="ws-poptab-info">
+                                                    <strong>Zonsan Wood</strong>
+                                                    <p>David wood requested to change.</p>
+                                                    <span class="ws-time-duration">4 mins ago</span>
+                                                </div>
+                                            </div>
+
+                                            <!--list three-->
+                                            <div class="ws-poptab-list">
+                                                <div class="ws-poptab-media">
+                                                    <img src="images/testimonials2/pic3.jpg" alt="">
+                                                </div>
+                                                <div class="ws-poptab-info">
+                                                    <strong>Denisa Wood</strong>
+                                                    <p>David wood requested to change.</p>
+                                                    <span class="ws-time-duration">2 mins ago</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="ws-poptab-all text-center">
+                                            <a href="#" class="btn-link-type">View All</a>
+                                        </div>                                                    
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            
+                <div class="row">
+                    <div class="col-xl-8 m-b30">
+                        <div class="card aon-card">
+                            <div class="card-header aon-card-header aon-card-header2"><h4><i class="feather-pie-chart"></i> Booking</h4></div>
+                            <div class="card-body aon-card-body">
+                                <div class="dx-viewport demo-container">
+                                  <div id="chart-demo">
+                                    <div id="chart"></div>
+                                    <div class="action">
+                                      <div class="label">Choose a temperature threshold, &deg;C: </div>
+                                      <div id="choose-temperature"></div>
+                                    </div>
+                                  </div>
+                                </div>
+  
+  
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="col-xl-4">
+                        <div class="card aon-card">
+                                <div class="card-header aon-card-header aon-card-header2"><h4><i class="feather-pie-chart"></i> Booking Stats</h4></div>
+                                <div class="card-body aon-card-body">
+                                    <div>
+                                        <ul class="list-unstyled">
+                                            <li class="py-3">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar-xs rounded-circle m-r10">
+                                                        <i class="feather-check-circle"></i>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <p class="text-muted mb-2">Completed</p>
+                                                        <div class="progress progress-sm animated-progess">
+                                                            <div class="progress-bar bg-success" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="py-3">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar-xs rounded-circle m-r10">
+                                                        <i class="feather-calendar"></i>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <p class="text-muted mb-2">Pending</p>
+                                                        <div class="progress progress-sm animated-progess">
+                                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="py-3">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar-xs align-self-center me-3">
+                                                        <div class="avatar-xs rounded-circle m-r10">
+                                                        <i class="feather-x-circle"></i>
+                                                    </div>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <p class="text-muted mb-2">Cancel</p>
+                                                        <div class="progress progress-sm animated-progess">
+                                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 19%" aria-valuenow="19" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <hr>
+                                    <div class="text-center">
+                                        <div class="row aon-states-row">
+                                            <div class="col-4">
+                                                <div class="mt-2">
+                                                    <p class="text-muted mb-2">Completed</p>
+                                                    <h5 class="font-size-16 mb-0">70</h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="mt-2">
+                                                    <p class="text-muted mb-2">Pending</p>
+                                                    <h5 class="font-size-16 mb-0">45</h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="mt-2">
+                                                    <p class="text-muted mb-2">Cancel</p>
+                                                    <h5 class="font-size-16 mb-0">19</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>--%>
+                
+                
+
+                
+          
+            </div>
+            
+    	</div>
+
+ </div>       
+ 
+  
+<!-- JAVASCRIPT  FILES ========================================= --> 
+<script  src="js/jquery-3.6.0.min.js"></script><!-- JQUERY.MIN JS -->
+<script  src="js/popper.min.js"></script><!-- POPPER.MIN JS -->
+<script  src="js/bootstrap.min.js"></script><!-- BOOTSTRAP.MIN JS -->
+<script  src="js/bootstrap-select.min.js"></script><!-- BOOTSTRAP SELECT -->    
+<script  src="js/jquery.bootstrap-touchspin.js"></script><!-- FORM JS -->
+<script  src="js/magnific-popup.min.js"></script><!-- MAGNIFIC-POPUP JS -->
+<script  src="js/waypoints.min.js"></script><!-- WAYPOINTS JS -->
+<script  src="js/counterup.min.js"></script><!-- COUNTERUP JS -->
+<script  src="js/waypoints-sticky.min.js"></script><!-- STICKY HEADER -->
+<script  src="js/isotope.pkgd.min.js"></script><!-- MASONRY  -->
+    
+<script  src="js/owl.carousel.min.js"></script><!-- OWL  SLIDER  -->
+<script  src="js/slick.min.js"></script><!-- OWL  SLIDER  -->
+    
+<script  src="js/theia-sticky-sidebar.js"></script><!-- STICKY SIDEBAR  -->
+<script src="js/m-custom-scrollbar.min.js"></script><!-- my account left panel scroller -->
+<script src="js/dropzone.js"></script><!-- Images upload -->  
+
+<script src="js/bootstrap4-toggle.min.js"></script>
+<script src="js/jquery.dataTables.min.js"></script>
+<script src="js/dataTables.bootstrap4.min.js"></script>
+    
+<!-- DevExtreme library -->
+<script src="../../cdn3.devexpress.com/jslib/21.2.3/js/dx.all.js"></script>
+
+<script  src="js/custom.js"></script><!-- CUSTOM FUCTIONS  -->
+<script src="js/lc_lightbox.lite.js" ></script><!-- IMAGE POPUP -->
+<script  src="js/bootstrap-slider.min.js"></script><!-- Form js -->
+    
+<script>
+jQuery(() => {
+  const source = new DevExpress.data.DataSource({
+    load() {
+      return $.getJSON('https://js.devexpress.com/Demos/WidgetsGallery/JSDemos/data/monthWeather.json');
+    },
+    loadMode: 'raw',
+    filter: ['t', '>', '2'],
+    paginate: false,
+  });
+
+  const palette = ['#022279', '#a2b5e7', '#ffb600'];
+  let paletteIndex = 0;
+
+  jQuery('#chart').dxChart({
+    dataSource: source,
+    title: '',
+    size: {
+      height: 420,
+    },
+    series: {
+      argumentField: 'day',
+      valueField: 't',
+      type: 'bar',
+    },
+    customizePoint() {
+      const color = palette[paletteIndex];
+      paletteIndex = paletteIndex === 2 ? 0 : paletteIndex + 1;
+
+      return {
+        color,
+      };
+    },
+    legend: {
+      visible: false,
+    },
+    export: {
+      enabled: false,
+    },
+    valueAxis: {
+      label: {
+        customizeText() {
+          return `${this.valueText}`;
+        },
+      },
+    },
+    loadingIndicator: {
+      enabled: true,
+    },
+  });
+
+  jQuery('#choose-temperature').dxSelectBox({
+    dataSource: [2, 4, 6, 8, 9, 10, 11],
+    value: 2,
+    onValueChanged(data) {
+      source.filter(['t', '>', data.value]);
+      source.load();
+    },
+  });
+});
+
+    
+</script><!-- Form js -->      
+
+</body>
+
+<!-- Mirrored from aonetheme.com/sf-html-demo/mc-dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 07:08:12 GMT -->
+</html>
